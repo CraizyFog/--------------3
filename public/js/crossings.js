@@ -132,7 +132,7 @@ class CrossingsManager {
                 <td>${crossing.crossingType}</td>
                 <td>${crossing.crossingPoint}</td>
                 <td>${crossing.purpose}</td>
-                <td>${crossing.registeredBy ? `${crossing.registeredBy.fullName}<br>${crossing.registeredBy.rank}` : 'Не вказано'}</td>
+                <td>${crossing.registeredBy ? `${crossing.registeredBy.fullName}<br>${crossing.registeredBy.rank}<br>${crossing.registeredBy.position}` : 'Не вказано'}</td>
                 <td>
                     <button class="action-btn edit-btn" onclick="crossingsManager.editCrossing('${crossing._id}')">
                         Редагувати

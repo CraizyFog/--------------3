@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати запис</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Система обліку перетину кордону</h1>
+            </div>
+            <div class="user-info">
+                <span id="user-name">Литвяков Андрій Сергійович</span>
+                <span id="user-role">майор</span>
+                <button id="logout-btn" class="btn-logout">Вийти</button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <button onclick="window.location.href='home.html'" class="nav-button">Головна сторінка</button>
+            <button onclick="window.location.href='add.html'" class="nav-button active">Додати запис</button>
+            <button onclick="window.location.href='statistics.html'" class="nav-button">Статистика</button>
+        </nav>
+    </header>
+    <main>
+        <div id="crossing-form" class="form-container">
+            <h2>Новий запис про перетин кордону</h2>
+            <form id="new-crossing-form">
+                <div class="form-group">
+                    <label for="lastName">Прізвище:</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Ім'я:</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="passportNumber">Номер паспорта:</label>
+                    <input type="text" id="passportNumber" required>
+                </div>
+                <button type="submit">Зберегти</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/crossings.js"></script>
+</body>
+</html>

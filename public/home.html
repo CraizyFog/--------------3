@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Система обліку перетину кордону</h1>
+            </div>
+            <div class="user-info">
+                <span id="user-name">Литвяков Андрій Сергійович</span>
+                <span id="user-role">майор</span>
+                <button id="logout-btn" class="btn-logout">Вийти</button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <button onclick="window.location.href='home.html'" class="nav-button active">Головна сторінка</button>
+            <button onclick="window.location.href='add.html'" class="nav-button">Додати запис</button>
+            <button onclick="window.location.href='statistics.html'" class="nav-button">Статистика</button>
+        </nav>
+    </header>
+    <main>
+        <div id="crossings-table" class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата/Час</th>
+                        <th>ПІБ</th>
+                        <th>Паспорт</th>
+                        <th>Громадянство</th>
+                        <th>Тип</th>
+                        <th>Пункт пропуску</th>
+                        <th>Мета</th>
+                        <th>Зареєстрував</th>
+                    </tr>
+                </thead>
+                <tbody id="crossings-data">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/crossings.js"></script>
+</body>
+</html>

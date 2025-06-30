@@ -49,7 +49,6 @@ router.get('/crossings', auth, async (req, res) => {
             const parts = req.query.sortBy.split(':');
             sort[parts[0]] = parts[1] === 'desc' ? -1 : 1;
         } else {
-            // За замовчуванням сортуємо за датою створення
             sort.createdAt = -1;
         }
 
@@ -63,7 +62,14 @@ router.get('/crossings', auth, async (req, res) => {
         ]);
 
         res.json({
-            crossings: crossings || [], // Забезпечуємо, що завжди буде масив
+            crossings: crossings.map(crossing => ({
+                ...crossing.toObject(),
+                registeredBy: crossing.registeredBy ? {
+                    fullName: crossing.registeredBy.fullName,
+                    rank: crossing.registeredBy.rank,
+                    position: crossing.registeredBy.position
+                } : null
+            })),
             total,
             page,
             pages: Math.ceil(total / limit)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка користувача</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>    <header>
+        <div class="nav-container">
+            <nav class="main-nav">
+                <button onclick="window.location.href='home.html'" class="nav-button">Головна сторінка</button>
+                <button onclick="window.location.href='add.html'" class="nav-button">Додати запис</button>
+                <button onclick="window.location.href='statistics.html'" class="nav-button">Статистика</button>
+                <button onclick="window.location.href='user.html'" class="nav-button active">Користувач</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="user-info">
+            <h2>Інформація про користувача</h2>
+            <p><strong>Ім'я:</strong> <span id="user-name">[Ім'я користувача]</span></p>
+            <p><strong>Звання:</strong> <span id="user-rank">[Звання користувача]</span></p>
+            <p><strong>Посада:</strong> <span id="user-position">[Посада користувача]</span></p>
+        </section>
+    </main>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -10,4 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Необроблена помилка:', event.reason);
         alert('Виникла помилка: ' + (event.reason.message || 'Невідома помилка'));
     });
+
+    // Обробник події для кнопки 'Головна сторінка'
+    document.getElementById('home-page-btn').addEventListener('click', () => {
+        document.getElementById('main-interface').style.display = 'block';
+        document.getElementById('crossings-table').style.display = 'block';
+        window.crossingsManager.loadCrossings();
+    });
 });

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Система обліку перетину кордону</h1>
+            </div>
+            <div class="user-info">
+                <span id="user-name">Литвяков Андрій Сергійович</span>
+                <span id="user-role">майор</span>
+                <button id="logout-btn" class="btn-logout">Вийти</button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <button onclick="window.location.href='home.html'" class="nav-button">Головна сторінка</button>
+            <button onclick="window.location.href='add.html'" class="nav-button">Додати запис</button>
+            <button onclick="window.location.href='statistics.html'" class="nav-button active">Статистика</button>
+        </nav>
+    </header>
+    <main>
+        <div id="statistics" class="statistics-container">
+            <h2>Статистика перетинів кордону</h2>
+            <div id="stats-data">
+                
+            </div>
+        </div>
+    </main>
+    <script src="js/statistics.js"></script>
+</body>
+</html>
